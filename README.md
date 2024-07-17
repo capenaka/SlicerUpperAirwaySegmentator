@@ -1,32 +1,21 @@
 # Slicer DentalSegmentator 
 
-3D Slicer extension for fully-automatic segmentation of CT and CBCT dental volumes.
+3D Slicer extension for fully-automatic segmentation of CBCT upper airway volumes.
 
 <img src="https://github.com/gaudot/SlicerDentalSegmentator/raw/main/Screenshots/1.png" width="700"/>
 
-After loading and selecting the volume to process, this module generates the following segmentations : 
-* Maxilla & Upper Skull
-* Mandible
-* Upper Teeth
-* Lower Teeth
-* Mandibular canal
+## UpperAirwaySegmentator Model
+UpperAirwaySegmentator is based on nnUNet framework. The Upper Airway (UA) of 75 CBCTs coming from the University of Alberta were manually segmented. 40 of these CBCT sets were randomly selected for training, while the remaining 35 were used for testing its performance.
 
-## DentalSegmentator model
+If you use UpperAirwaySegmentator for your work, please cite our paper and nnU-Net:
 
-DentalSegmentator is based on nnU-Net framework. It has been trained on 470 dento-maxillo-facial CT and CBCT scans, and evaluated on a hold-out test dataset of 256 CT and CBCT scans from 7 institutions. 
+> Matos Camarillo A, Capenakas-Gianoni S, Punithakumar K, Lagravere-Vich M. AirwaySegmentator: A deep learning-based method for Nasopharyngeal airway segmentation. Published online Month day, 2024:2024.xx.xx.xxxxxxxx. doi:10.1101/2024.xx.xx.xxxxxxxx
 
-The results obtained on our highly diversified dataset demonstrate that our tool can provide fully automatic and robust multiclass segmentation for dento-maxillo-facial (CB)CT scans, independantly of the field of view of the scan.
-
+> Isensee F, Jaeger PF, Kohl SAA, Petersen J, Maier-Hein KH. nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nat Methods. 2021;18(2):203-211. doi:10.1038/s41592-020-01008-z
 <img src="https://github.com/gaudot/SlicerDentalSegmentator/raw/main/Screenshots/dentalsegmentator_example.png" width="500"/>
 
-If you use DentalSegmentator for your work, please cite our paper and nnU-Net:
-
->Dot G, et al. DentalSegmentator: robust open source deep learning-based CT and CBCT image segmentation. Journal of Dentistry (2024) doi:[10.1016/j.jdent.2024.105130](https://doi.org/10.1016/j.jdent.2024.105130)
-
->Isensee F, et al. nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nat Methods. 2021;18(2):203-211. doi:[10.1038/s41592-020-01008-z](https://doi.org/10.1038/s41592-020-01008-z)
-
-We also deeply encourage you to use this badge when displaying models created with this extension:
-<img src="https://github.com/gaudot/SlicerDentalSegmentator/raw/main/Screenshots/badge_dentalsegmentator.png" width="200"/>
+<!--tk We also deeply encourage you to use this badge when displaying models created with this extension:
+<img src="https://github.com/gaudot/SlicerDentalSegmentator/raw/main/Screenshots/badge_dentalsegmentator.png" width="200"/>-->
 
 ## Using the extension
 
@@ -36,12 +25,12 @@ This extension is compatible with the latest latest 3D Slicer Preview Release (v
 
 The plugin can be installed in Slicer using
 the [extension manager]( https://slicer.readthedocs.io/en/latest/user_guide/extensions_manager.html#install-extensions).
-It can be found using the search bar by typing "DentalSegmentator".
+It can be found using the search bar by typing "UpperAirwaySegmentator".
 
 <img src="https://github.com/gaudot/SlicerDentalSegmentator/raw/main/Screenshots/extension_manager.png" width="200" />
 
-After the install process and restart of Slicer, the extension can be found in the module file explorer under `Segmentation>DentalSegmentator`.
-It can also be found by using the `find` module button and searching for the keyword `DentalSegmentator`.
+After the install process and restart of Slicer, the extension can be found in the module file explorer under `Segmentation>UpperAirwaySegmentator`.
+It can also be found by using the `find` module button and searching for the keyword `UpperAirwaySegmentator`.
 
 To use the extension, load a dental CT or CBCT by either drag and dropping the data in 3D Slicer or by using the
 `DATA` or `DCM` load buttons.
