@@ -20,8 +20,8 @@ from .Utils import (
 
 
 class ExportFormat(Flag):
-    OBJ = auto()
     STL = auto()
+    OBJ = auto()
     NIFTI = auto()
 
 
@@ -30,7 +30,9 @@ class SegmentationWidget(qt.QWidget):
         super().__init__(parent)
         self.logic = logic or self._createSlicerSegmentationLogic()
         self._prevSegmentationNode = None
-        self._minimumIslandSize_mm3 = 60
+        voxel_size = 0.3  # mm³  for CBCTs
+        max_voxels_to_remove = 200
+        self._minimumIslandSize_mm3 = voxel_size * max_voxels_to_remove
 
         self.inputSelector = slicer.qMRMLNodeComboBox(self)
         self.inputSelector.nodeTypes = ["vtkMRMLScalarVolumeNode"]
@@ -71,6 +73,8 @@ class SegmentationWidget(qt.QWidget):
         self.surfaceSmoothingSlider.maximum = 1
         self.surfaceSmoothingSlider.singleStep = 0.1
         self.surfaceSmoothingSlider.setValue(smoothingSlider.value)
+        self.surfaceSmoothingSlider.setValue(0)  # Set default value to 0 tk
+        smoothingSlider.setValue(0)  # Set the 3D button's smoothing slider to 0 as well tk
         self.surfaceSmoothingSlider.tracking = False
         self.surfaceSmoothingSlider.valueChanged.connect(smoothingSlider.setValue)
 
@@ -79,8 +83,11 @@ class SegmentationWidget(qt.QWidget):
         exportLayout = qt.QFormLayout(exportWidget)
         self.stlCheckBox = qt.QCheckBox(exportWidget)
         self.stlCheckBox.setChecked(True)
+        # self.niftiCheckBox.setChecked(True)
         self.objCheckBox = qt.QCheckBox(exportWidget)
         self.niftiCheckBox = qt.QCheckBox(exportWidget)
+        self.niftiCheckBox.setChecked(True)  # Set NIFTI checkbox to checked by default
+
         exportLayout.addRow("Export STL", self.stlCheckBox)
         exportLayout.addRow("Export OBJ", self.objCheckBox)
         exportLayout.addRow("Export NIFTI", self.niftiCheckBox)
@@ -373,9 +380,9 @@ class SegmentationWidget(qt.QWidget):
 
         self._initializeSegmentationNodeDisplay(segmentationNode)
         segmentation = segmentationNode.GetSegmentation()
-        labels = ["Maxilla & Upper Skull", "Mandible", "Upper Teeth", "Lower Teeth", "Mandibular canal"]
-        colors = [self.toRGB(c) for c in ["#E3DD90", "#D4A1E6", "#DC9565", "#EBDFB4", "#D8654F"]]
-        opacities = [0.45, 0.45, 1.0, 1.0, 1.0]
+        labels = ["Airway"]
+        colors = ['82B1FF'] # Set Airway color to light blue
+        opacities = [0.45]
         segmentIds = [f"Segment_{i + 1}" for i in range(len(labels))]
 
         segmentationDisplayNode = self.getCurrentSegmentationNode().GetDisplayNode()
@@ -393,28 +400,26 @@ class SegmentationWidget(qt.QWidget):
 
     def _postProcessSegments(self):
         """
-        Runs Island keep largest, and remove small islands on Maxilla, upper and lower teeth.
+        Runs remove small islands on Airway segment
         """
 
         self.onProgressInfo("Post processing results...")
-        self._keepLargestIsland("Segment_1")
-        self._removeSmallIsland("Segment_3")
-        self._removeSmallIsland("Segment_4")
+        self._removeSmallIsland("Segment_1")
         self.onProgressInfo("Post processing done.")
 
-    def _keepLargestIsland(self, segmentId):
-        """
-        Keeps largest voxel islands for input segmentId.
-        """
-        segment = self._getSegment(segmentId)
-        if not segment:
-            return
+    # def _keepLargestIsland(self, segmentId):
+    #     """
+    #     Keeps largest voxel islands for input segmentId.
+    #     """
+    #     segment = self._getSegment(segmentId)
+    #     if not segment:
+    #         return
 
-        self.onProgressInfo(f"Keep largest region for {segment.GetName()}...")
-        self.segmentEditorWidget.setCurrentSegmentID(segmentId)
-        effect = self.segmentEditorWidget.effectByName("Islands")
-        effect.setParameter("Operation", SegmentEditorEffects.KEEP_LARGEST_ISLAND)
-        effect.self().onApply()
+    #     self.onProgressInfo(f"Keep largest region for {segment.GetName()}...")
+    #     self.segmentEditorWidget.setCurrentSegmentID(segmentId)
+    #     effect = self.segmentEditorWidget.effectByName("Islands")
+    #     effect.setParameter("Operation", SegmentEditorEffects.KEEP_LARGEST_ISLAND)
+    #     effect.self().onApply()
 
     def _removeSmallIsland(self, segmentId):
         """

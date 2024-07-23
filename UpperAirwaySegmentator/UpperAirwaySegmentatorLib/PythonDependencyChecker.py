@@ -17,7 +17,7 @@ class PythonDependencyChecker:
         from .SegmentationWidget import SegmentationWidget
         self.dependencyChecked = False
         self.destWeightFolder = Path(destWeightFolder or SegmentationWidget.nnUnetFolder())
-        self.repo_path = repoPath or "gaudot/SlicerDentalSegmentator"
+        self.repo_path = repoPath or "alejandro-matos/SlicerUpperAirwaySegmentator"
 
     @classmethod
     def areDependenciesSatisfied(cls):
@@ -107,7 +107,7 @@ class PythonDependencyChecker:
             slicer.util.errorDisplay(
                 "Failed to download weights. Please retry or manually install them to proceed.\n"
                 "To manually install the weights, please refer to the documentation here :\n"
-                "https://github.com/gaudot/SlicerDentalSegmentator",
+                "https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator",
                 detailedText=traceback.format_exc()
             )
             return False

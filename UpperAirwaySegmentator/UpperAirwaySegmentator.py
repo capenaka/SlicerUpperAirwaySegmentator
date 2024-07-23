@@ -1,35 +1,34 @@
 import slicer
 from slicer.ScriptedLoadableModule import *
 
-from DentalSegmentatorLib import SegmentationWidget
+from UpperAirwaySegmentatorLib import SegmentationWidget
 
 
-class DentalSegmentator(ScriptedLoadableModule):
+class UpperAirwaySegmentator(ScriptedLoadableModule):
     def __init__(self, parent):
         from slicer.i18n import tr, translate
         ScriptedLoadableModule.__init__(self, parent)
-        self.parent.title = tr("DentalSegmentator")
+        self.parent.title = tr("UpperAirwaySegmentator")
         self.parent.categories = [translate("qSlicerAbstractCoreModule", "Segmentation")]
         self.parent.dependencies = []
         self.parent.contributors = [
-            "Gauthier DOT (AP-HP)",
-            "Laurent GAJNY (ENSAM)",
-            "Roman FENIOUX (KITWARE SAS)",
-            "Thibault PELLETIER (KITWARE SAS)"
+            "Alejandro Matos Camarillo (uAlberta)",
+            "Silvia Capenakas (uAlberta)",
+            "Manuel Lagravere (uAlberta)"
         ]
 
         self.parent.helpText = tr(
-            "Fully automatic AI segmentation tool for Dental CT and CBCT scans based on DentalSegmentator nnU-Net "
+            "Fully automatic AI segmentation tool for CBCT scans based on UpperAirwaySegmentator nnU-Net "
             "model."
         )
         self.parent.acknowledgementText = tr(
-            "This module was originally developed for the "
-            '<a href="https://orthodontie-ffo.org/">Fédération Française d\'Orthodontie</a> '
-            "(FFO) for the analysis of dento-maxillo-facial data."
+            "This module was originally developed at the"
+            '<a href="https://www.ualberta.ca/school-of-dentistry/">University of Alberta</a> '
+            "(uAlberta) for the analysis of orthodontic data."
         )
 
 
-class DentalSegmentatorWidget(ScriptedLoadableModuleWidget):
+class UpperAirwaySegmentatorWidget(ScriptedLoadableModuleWidget):
     def __init__(self, parent=None) -> None:
         ScriptedLoadableModuleWidget.__init__(self, parent)
         self.logic = None
@@ -43,7 +42,7 @@ class DentalSegmentatorWidget(ScriptedLoadableModuleWidget):
         self.layout.addStretch()
 
 
-class DentalSegmentatorTest(ScriptedLoadableModuleTest):
+class UpperAirwaySegmentatorTest(ScriptedLoadableModuleTest):
     def runTest(self):
         try:
             from SlicerPythonTestRunnerLib import RunnerLogic, RunnerWidget, RunSettings, isRunningInTestMode

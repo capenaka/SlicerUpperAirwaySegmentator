@@ -1,4 +1,4 @@
-# Slicer DentalSegmentator 
+# Slicer UpperAirwaySegmentator 
 
 3D Slicer extension for fully-automatic segmentation of CBCT upper airway volumes.
 
