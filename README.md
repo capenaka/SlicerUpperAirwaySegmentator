@@ -46,7 +46,7 @@ Click on the `Apply` button to start the segmentation.
 <img src="https://github.com/gaudot/SlicerDentalSegmentator/raw/main/Screenshots/4.png" width="300" />
 
 During the first launch, the module's dependencies will be installed. These dependencies include : 
-* The AI model weights
+* The AI model weights (~1 GB)
 * Light the torch
 * PyTorch
 * nnUNet V2 

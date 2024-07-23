@@ -371,7 +371,7 @@ class SegmentationWidget(qt.QWidget):
 
     def _updateSegmentationDisplay(self):
         """
-        Update the segmentation node display by updating its names, colors, opacities and making sure 3D display is
+        Update the segmentation node display by updating its name, color, opacity and making sure 3D display is
         activated.
         """
         segmentationNode = self.getCurrentSegmentationNode()
@@ -380,19 +380,20 @@ class SegmentationWidget(qt.QWidget):
 
         self._initializeSegmentationNodeDisplay(segmentationNode)
         segmentation = segmentationNode.GetSegmentation()
-        labels = ["Airway"]
-        colors = ['82B1FF'] # Set Airway color to light blue
-        opacities = [0.45]
-        segmentIds = [f"Segment_{i + 1}" for i in range(len(labels))]
+        # Turn off surface smoothing
+        segmentation.SetConversionParameter("Smoothing factor","0.0")
+        
+        # Single label setup
+        label = "Airway"
+        color = [130/255, 177/255, 255/255]  # Light blue color in RGB format
+        opacity = 0.8
+        segmentId = "Segment_1"
 
-        segmentationDisplayNode = self.getCurrentSegmentationNode().GetDisplayNode()
-        for segmentId, label, color, opacity in zip(segmentIds, labels, colors, opacities):
-            segment = segmentation.GetSegment(segmentId)
-            if segment is None:
-                continue
-
+        segmentationDisplayNode = segmentationNode.GetDisplayNode()
+        segment = segmentation.GetSegment(segmentId)
+        if segment is not None:
             segment.SetName(label)
-            segment.SetColor(*color)
+            segment.SetColor(color[0], color[1], color[2])  # Set color using RGB values
             segmentationDisplayNode.SetSegmentOpacity3D(segmentId, opacity)
 
         self.show3DButton.setChecked(True)
