@@ -2,7 +2,7 @@
 
 3D Slicer extension for fully-automatic segmentation of CBCT upper airway volumes.
 
-<img src="https://github.com/gaudot/SlicerDentalSegmentator/raw/main/Screenshots/1.png" width="700"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/Screenshots/11.png" width="700"/>
 
 ## UpperAirwaySegmentator Model
 UpperAirwaySegmentator is based on nnUNet framework. The Upper Airway (UA) of 75 CBCTs coming from the University of Alberta were manually segmented. 40 of these CBCT sets were randomly selected for training, while the remaining 35 were used for testing its performance.
@@ -12,7 +12,7 @@ If you use UpperAirwaySegmentator for your work, please cite our paper and nnU-N
 > Matos Camarillo A, Capenakas-Gianoni S, Punithakumar K, Lagravere-Vich M. AirwaySegmentator: A deep learning-based method for Nasopharyngeal airway segmentation. Published online Month day, 2024:2024.xx.xx.xxxxxxxx. doi:10.1101/2024.xx.xx.xxxxxxxx
 
 > Isensee F, Jaeger PF, Kohl SAA, Petersen J, Maier-Hein KH. nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nat Methods. 2021;18(2):203-211. doi:10.1038/s41592-020-01008-z
-<img src="https://github.com/gaudot/SlicerDentalSegmentator/raw/main/Screenshots/dentalsegmentator_example.png" width="500"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/Screenshots/angles.png" width="500"/>
 
 <!--tk We also deeply encourage you to use this badge when displaying models created with this extension:
 <img src="https://github.com/gaudot/SlicerDentalSegmentator/raw/main/Screenshots/badge_dentalsegmentator.png" width="200"/>-->
@@ -27,7 +27,7 @@ The plugin can be installed in Slicer using
 the [extension manager]( https://slicer.readthedocs.io/en/latest/user_guide/extensions_manager.html#install-extensions).
 It can be found using the search bar by typing "UpperAirwaySegmentator".
 
-<img src="https://github.com/gaudot/SlicerDentalSegmentator/raw/main/Screenshots/extension_manager.png" width="200" />
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/Screenshots/extension_manager.png" width="200" />
 
 After the install process and restart of Slicer, the extension can be found in the module file explorer under `Segmentation>UpperAirwaySegmentator`.
 It can also be found by using the `find` module button and searching for the keyword `UpperAirwaySegmentator`.
@@ -43,7 +43,7 @@ Switch module to the `DentalSegmentator` module and select the volume in the fir
 
 Click on the `Apply` button to start the segmentation.
 
-<img src="https://github.com/gaudot/SlicerDentalSegmentator/raw/main/Screenshots/4.png" width="300" />
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/Screenshots/4.png" width="300" />
 
 During the first launch, the module's dependencies will be installed. These dependencies include : 
 * The AI model weights (~1 GB)
@@ -55,23 +55,23 @@ After the install, the volume will be transferred and sent to the nnUNet V2 libr
 If your device doesn't include CUDA, the processing may be very long and a dialog will ask for confirmation before
 starting the segmentation process.
 
-<img src="https://github.com/gaudot/SlicerDentalSegmentator/raw/main/Screenshots/dentalsegmentator_run.gif"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/Screenshots/dentalsegmentator_run.gif"/>
 
 During execution, the processing can be canceled using the `Stop` button.
 The progress will be reported in the console logs.
 
-<img src="https://github.com/gaudot/SlicerDentalSegmentator/raw/main/Screenshots/5.png" width="300"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/Screenshots/5.png" width="300"/>
 
 After the segmentation process has run, the segmentation will be loaded into the application.
 The segmentation results can be modified using the `Segment Editor` tools.
 
-<img src="https://github.com/gaudot/SlicerDentalSegmentator/raw/main/Screenshots/dentalsegmentator_3dmodel.gif"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/Screenshots/dentalsegmentator_3dmodel.gif"/>
 
 The segmentation can be exported using the `Export segmentation` menu and selecting the export format to use.
 
 The `Surface smoothing` slider allows to change the 3D view surface smoothing algorithm.
 
-<img src="https://github.com/gaudot/SlicerDentalSegmentator/raw/main/Screenshots/6.png" width="300"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/Screenshots/6.png" width="300"/>
 
 ## Troubleshooting
 
