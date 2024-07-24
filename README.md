@@ -2,7 +2,7 @@
 
 3D Slicer extension for fully-automatic segmentation of CBCT upper airway volumes.
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/Screenshots/11.png" width="700"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/11.png" width="700"/>
 
 ## UpperAirwaySegmentator Model
 UpperAirwaySegmentator is based on nnUNet framework. The Upper Airway (UA) of 75 CBCTs coming from the University of Alberta were manually segmented. 40 of these CBCT sets were randomly selected for training, while the remaining 35 were used for testing its performance.
@@ -12,7 +12,7 @@ If you use UpperAirwaySegmentator for your work, please cite our paper and nnU-N
 > Matos Camarillo A, Capenakas-Gianoni S, Punithakumar K, Lagravere-Vich M. AirwaySegmentator: A deep learning-based method for Nasopharyngeal airway segmentation. Published online Month day, 2024:2024.xx.xx.xxxxxxxx. doi:10.1101/2024.xx.xx.xxxxxxxx
 
 > Isensee F, Jaeger PF, Kohl SAA, Petersen J, Maier-Hein KH. nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nat Methods. 2021;18(2):203-211. doi:10.1038/s41592-020-01008-z
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/Screenshots/angles.png" width="500"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/angles.png" width="500"/>
 
 <!--tk We also deeply encourage you to use this badge when displaying models created with this extension:
 <img src="https://github.com/gaudot/SlicerDentalSegmentator/raw/main/Screenshots/badge_dentalsegmentator.png" width="200"/>-->
@@ -71,7 +71,7 @@ The segmentation can be exported using the `Export segmentation` menu and select
 
 The `Surface smoothing` slider allows to change the 3D view surface smoothing algorithm.
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/Screenshots/6.png" width="300"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/6.png" width="300"/>
 
 ## Troubleshooting
 
