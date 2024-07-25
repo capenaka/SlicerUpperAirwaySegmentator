@@ -130,7 +130,7 @@ Authors: A. Matos Camarillo (University of Alberta), S. Capenakas-Gianoni (Unive
 
 Supported by the [tk Add source of funding here]
 
-This extension builds upon the work of [G. Dot (Université Paris Cité, AP-HP, Arts-et-Métiers), L. Gajny (Arts-et-Métiers), R. Fenioux (Kitware SAS), T. Pelletier (Kitware SAS)] in the [Slicer DentalSegmentator](https://github.com/gaudot/SlicerDentalSegmentator/tree/main). The original code structure and core functionalities have been adapted and expanded for the purpose of this project.
+This extension builds upon the work of G. Dot (Université Paris Cité, AP-HP, Arts-et-Métiers), L. Gajny (Arts-et-Métiers), R. Fenioux (Kitware SAS), T. Pelletier (Kitware SAS) in the [Slicer DentalSegmentator project](https://github.com/gaudot/SlicerDentalSegmentator/tree/main). The original code structure and core functionalities have been adapted and expanded for the purpose of this project.
 
 <!-- ### Changes Made
 
@@ -140,5 +140,5 @@ This extension builds upon the work of [G. Dot (Université Paris Cité, AP-HP, 
 
 ## Contact
 
-For any questions or suggestions, please contact [Alejandro Matos Camarillo] at [amatos@ualberta.ca].
+For any questions or suggestions, please contact Alejandro Matos Camarillo at amatos@ualberta.ca.
 
