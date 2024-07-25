@@ -127,14 +127,11 @@ Authors: A. Matos Camarillo (University of Alberta), S. Capenakas-Gianoni (Unive
 
 <!-- Supported by the [tk Add source of funding here] -->
 
-This extension builds upon the work of G. Dot (Université Paris Cité, AP-HP, Arts-et-Métiers), L. Gajny (Arts-et-Métiers), R. Fenioux (Kitware SAS), T. Pelletier (Kitware SAS) in the [Slicer DentalSegmentator project](https://github.com/gaudot/SlicerDentalSegmentator/tree/main). 
-
-<!--img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/badge_dentalsegmentator.png" width="200"/-->
-The original code structure and core functionalities have been adapted for the purpose of this project.
+This project is based on code from [Slicer DentalSegmentator project](https://github.com/gaudot/SlicerDentalSegmentator/tree/main), licensed under the Apache 2.0 License. The original code structure and core functionalities have been adapted for the purpose of this project.
 
 <!-- ### Changes Made
 
-- Overview of the significant changes and improvements made.
+- Incorporated our nnUNet-v2 model weights trained on the segmentation of the pharyngeal and sinonasal airway regions
 - Details about new features or functionalities added.
 - Any other relevant modifications. -->
 
