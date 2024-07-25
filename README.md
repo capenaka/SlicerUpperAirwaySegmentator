@@ -129,8 +129,7 @@ Authors: A. Matos Camarillo (University of Alberta), S. Capenakas-Gianoni (Unive
 
 This extension builds upon the work of G. Dot (Université Paris Cité, AP-HP, Arts-et-Métiers), L. Gajny (Arts-et-Métiers), R. Fenioux (Kitware SAS), T. Pelletier (Kitware SAS) in the [Slicer DentalSegmentator project](https://github.com/gaudot/SlicerDentalSegmentator/tree/main). 
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/badge_dentalsegmentator.png" width="200"/>
-
+<!--img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/badge_dentalsegmentator.png" width="200"/-->
 The original code structure and core functionalities have been adapted for the purpose of this project.
 
 <!-- ### Changes Made
