@@ -15,7 +15,7 @@ If you use UpperAirwaySegmentator for your work, please cite our paper and nnU-N
 <img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/angles.png" width="500"/>
 
 <!--tk We also deeply encourage you to use this badge when displaying models created with this extension:
-<img src="https://github.com/gaudot/SlicerDentalSegmentator/raw/main/Screenshots/badge_dentalsegmentator.png" width="200"/>-->
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/badge_dentalsegmentator.png" width="200"/>-->
 
 ## Using the extension
 
@@ -27,7 +27,7 @@ The plugin can be installed in Slicer using
 the [extension manager]( https://slicer.readthedocs.io/en/latest/user_guide/extensions_manager.html#install-extensions).
 It can be found using the search bar by typing "UpperAirwaySegmentator".
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/Screenshots/extension_manager.png" width="200" />
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/extension_manager.png" width="200" />
 
 After the install process and restart of Slicer, the extension can be found in the module file explorer under `Segmentation>UpperAirwaySegmentator`.
 It can also be found by using the `find` module button and searching for the keyword `UpperAirwaySegmentator`.
@@ -43,7 +43,7 @@ Switch module to the `DentalSegmentator` module and select the volume in the fir
 
 Click on the `Apply` button to start the segmentation.
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/Screenshots/4.png" width="300" />
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/4.png" width="300" />
 
 During the first launch, the module's dependencies will be installed. These dependencies include : 
 * The AI model weights (~1 GB)
@@ -55,17 +55,17 @@ After the install, the volume will be transferred and sent to the nnUNet V2 libr
 If your device doesn't include CUDA, the processing may be very long and a dialog will ask for confirmation before
 starting the segmentation process.
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/Screenshots/dentalsegmentator_run.gif"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/dentalsegmentator_run.gif"/>
 
 During execution, the processing can be canceled using the `Stop` button.
 The progress will be reported in the console logs.
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/Screenshots/5.png" width="300"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/5.png" width="300"/>
 
 After the segmentation process has run, the segmentation will be loaded into the application.
 The segmentation results can be modified using the `Segment Editor` tools.
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/Screenshots/dentalsegmentator_3dmodel.gif"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/dentalsegmentator_3dmodel.gif"/>
 
 The segmentation can be exported using the `Export segmentation` menu and selecting the export format to use.
 
@@ -94,7 +94,7 @@ a new version of PyTorch by setting the `Computation backend` compatible with yo
 
 The PyTorch version should be greater than `2.0.0` for nnUNet compatibility.
 
-<img src="https://github.com/gaudot/SlicerDentalSegmentator/raw/main/Screenshots/7.png" width="300"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/7.png" width="300"/>
 
 ### Failed to download / find weights
 
@@ -105,19 +105,19 @@ Download the latest `.zip` file from the release.
 
 Navigate to your `DentalSegmentator` folder (this folder can be also found in the module finder window).
 
-<img src="https://github.com/gaudot/SlicerDentalSegmentator/raw/main/Screenshots/8.png" width="500"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/8.png" width="500"/>
 
-Unzip the weight file in the `DentalSegmentator\Resources\ML` folder.
+Unzip the weight file in the `UpperAirwaySegmentator\Resources\ML` folder.
 
 Create a `download_info.json` file containing the path to the downloaded zip file for future reference : 
 
 {
-  "download_url": "https://github.com/gaudot/SlicerDentalSegmentator/releases/download/v1.0.0-alpha/Dataset111_453CT_v100.zip"
+  "download_url": "https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/releases/download/v1.0.0-alpha/Dataset013_Airways_40CBCT_v100.zip"
 }
 
-## Command-line interface  
+<!-- ## Command-line interface  
 
-If you want tu use DentalSegmentator via nnU-Net command-line interface use, [the pretrained model is available on Zenodo platform](https://zenodo.org/doi/10.5281/zenodo.10829674).
+If you want tu use DentalSegmentator via nnU-Net command-line interface use, [the pretrained model is available on Zenodo platform](https://zenodo.org/doi/10.5281/zenodo.10829674). -->
 
 ## Contributing
 
@@ -126,7 +126,19 @@ the [CONTRIBUTING.md file](CONTRIBUTING.md).
 
 ## Acknowledgments 
 
-Authors: G. Dot (Université Paris Cité, AP-HP, Arts-et-Métiers), L. Gajny (Arts-et-Métiers), R. Fenioux (Kitware SAS), T. Pelletier (Kitware SAS)
+Authors: A. Matos Camarillo (University of Alberta), S. Capenakas-Gianoni (University of Alberta), M. Lagravere-Vich 
 
-Supported by the [FFO (Fédération Française d'Orthodontie)](https://orthodontie-ffo.org/) and the [Fondation des Gueules Cassées](https://www.gueules-cassees.asso.fr/).
+Supported by the [tk Add source of funding here]
+
+This extension builds upon the work of [G. Dot (Université Paris Cité, AP-HP, Arts-et-Métiers), L. Gajny (Arts-et-Métiers), R. Fenioux (Kitware SAS), T. Pelletier (Kitware SAS)] in the [Slicer DentalSegmentator](https://github.com/gaudot/SlicerDentalSegmentator/tree/main). The original code structure and core functionalities have been adapted and expanded for the purpose of this project.
+
+<!-- ### Changes Made
+
+- Overview of the significant changes and improvements made.
+- Details about new features or functionalities added.
+- Any other relevant modifications. -->
+
+## Contact
+
+For any questions or suggestions, please contact [Alejandro Matos Camarillo] at [amatos@ualberta.ca].
 
