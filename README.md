@@ -5,7 +5,7 @@
 <img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/11.png" width="700"/>
 
 ## UpperAirwaySegmentator Model
-UpperAirwaySegmentator is based on nnUNet framework. The Upper Airway (UA) of 75 CBCTs coming from the University of Alberta were manually segmented. 40 of these CBCT sets were randomly selected for training, while the remaining 35 were used for testing its performance.
+UpperAirwaySegmentator is based on nnUNet framework. The Upper Airway (UA) is comprised of the pharyngeal and sinonasal airway regions. In this work, 75 CBCTs coming from the University of Alberta were manually segmented. 40 of these CBCT sets were randomly selected for training, while the remaining 35 were used for testing its performance. <!-- Will change this number later when I add more CBCTs to the training in v2 tk-->
 
 If you use UpperAirwaySegmentator for your work, please cite our paper and nnU-Net:
 
@@ -13,9 +13,6 @@ If you use UpperAirwaySegmentator for your work, please cite our paper and nnU-N
 
 > Isensee F, Jaeger PF, Kohl SAA, Petersen J, Maier-Hein KH. nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nat Methods. 2021;18(2):203-211. doi:10.1038/s41592-020-01008-z
 <img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/angles.png" width="500"/>
-
-<!--tk We also deeply encourage you to use this badge when displaying models created with this extension:
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/badge_dentalsegmentator.png" width="200"/>-->
 
 ## Using the extension
 
@@ -46,7 +43,7 @@ Click on the `Apply` button to start the segmentation.
 <img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/4.png" width="300" />
 
 During the first launch, the module's dependencies will be installed. These dependencies include : 
-* The AI model weights (~1 GB)
+* The AI model weights
 * Light the torch
 * PyTorch
 * nnUNet V2 
@@ -128,9 +125,13 @@ the [CONTRIBUTING.md file](CONTRIBUTING.md).
 
 Authors: A. Matos Camarillo (University of Alberta), S. Capenakas-Gianoni (University of Alberta), M. Lagravere-Vich 
 
-Supported by the [tk Add source of funding here]
+<!-- Supported by the [tk Add source of funding here] -->
 
-This extension builds upon the work of G. Dot (Université Paris Cité, AP-HP, Arts-et-Métiers), L. Gajny (Arts-et-Métiers), R. Fenioux (Kitware SAS), T. Pelletier (Kitware SAS) in the [Slicer DentalSegmentator project](https://github.com/gaudot/SlicerDentalSegmentator/tree/main). The original code structure and core functionalities have been adapted and expanded for the purpose of this project.
+This extension builds upon the work of G. Dot (Université Paris Cité, AP-HP, Arts-et-Métiers), L. Gajny (Arts-et-Métiers), R. Fenioux (Kitware SAS), T. Pelletier (Kitware SAS) in the [Slicer DentalSegmentator project](https://github.com/gaudot/SlicerDentalSegmentator/tree/main). 
+
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/badge_dentalsegmentator.png" width="200"/>
+
+The original code structure and core functionalities have been adapted for the purpose of this project.
 
 <!-- ### Changes Made
 
