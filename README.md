@@ -52,7 +52,7 @@ After the install, the volume will be transferred and sent to the nnUNet V2 libr
 If your device doesn't include CUDA, the processing may be very long and a dialog will ask for confirmation before
 starting the segmentation process.
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/dentalsegmentator_run.gif"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/upperairwaysegmentator_run.gif"/>
 
 During execution, the processing can be canceled using the `Stop` button.
 The progress will be reported in the console logs.
@@ -62,9 +62,9 @@ The progress will be reported in the console logs.
 After the segmentation process has run, the segmentation will be loaded into the application.
 The segmentation results can be modified using the `Segment Editor` tools.
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/dentalsegmentator_3dmodel.gif"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/upperairwaysegmentator_3dmodel.gif"/>
 
-The segmentation can be exported using the `Export segmentation` menu and selecting the export format to use.
+The segmentation can be exported as STL, NIfTI and/or OBJ using the `Export segmentation` menu and selecting the export format(s).
 
 The `Surface smoothing` slider allows to change the 3D view surface smoothing algorithm.
 
@@ -96,13 +96,13 @@ The PyTorch version should be greater than `2.0.0` for nnUNet compatibility.
 ### Failed to download / find weights
 
 If the weights are not correctly installed, you can install them manually.
-To do so, go to https://github.com/gaudot/SlicerDentalSegmentator  and select the latest release.
+To do so, go to https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator  and select the latest release.
 
 Download the latest `.zip` file from the release.
 
-Navigate to your `DentalSegmentator` folder (this folder can be also found in the module finder window).
+Navigate to your `UpperAirwaySegmentator` folder <!--(this folder can be also found in the module finder window). -->
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/8.png" width="500"/>
+<!-- <img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/8.png" width="500"/> -->
 
 Unzip the weight file in the `UpperAirwaySegmentator\Resources\ML` folder.
 
@@ -123,7 +123,7 @@ the [CONTRIBUTING.md file](CONTRIBUTING.md).
 
 ## Acknowledgments 
 
-Authors: A. Matos Camarillo (University of Alberta), S. Capenakas-Gianoni (University of Alberta), M. Lagravere-Vich 
+Authors: A. Matos Camarillo (University of Alberta), S. Capenakas-Gianoni (University of Alberta), M. Lagravere-Vich (University of Alberta)
 
 <!-- Supported by the [tk Add source of funding here] -->
 
