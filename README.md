@@ -7,24 +7,26 @@
 ## UpperAirwaySegmentator Model
 UpperAirwaySegmentator is based on nnUNet framework. The Upper Airway (UA) is comprised of the pharyngeal and sinonasal airway regions. In this work, 75 CBCTs coming from the University of Alberta were manually segmented. 40 of these CBCT sets were randomly selected for training, while the remaining 35 were used for testing its performance. <!-- Will change this number later when I add more CBCTs to the training in v2 tk-->
 
-If you use UpperAirwaySegmentator for your work, please cite our paper and nnU-Net:
+If you use UpperAirwaySegmentator for your work, please also cite <!--our paper and -->nnU-Net:
 
-> Matos Camarillo A, Capenakas-Gianoni S, Punithakumar K, Lagravere-Vich M. AirwaySegmentator: A deep learning-based method for Nasopharyngeal airway segmentation. Published online Month day, 2024:2024.xx.xx.xxxxxxxx. doi:10.1101/2024.xx.xx.xxxxxxxx
+<!--> Matos Camarillo A, Capenakas-Gianoni S, Punithakumar K, Lagravere-Vich M. AirwaySegmentator: A deep learning-based method for Nasopharyngeal airway segmentation. Published online Month day, 2024:2024.xx.xx.xxxxxxxx. doi:10.1101/2024.xx.xx.xxxxxxxx-->
 
 > Isensee F, Jaeger PF, Kohl SAA, Petersen J, Maier-Hein KH. nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nat Methods. 2021;18(2):203-211. doi:10.1038/s41592-020-01008-z
 <img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/angles.png" width="500"/>
 
 ## Using the extension
 
-[Here is a video tutorial](https://www.youtube.com/watch?v=BEG-XhjjiaY) showing the installation process and demonstrating the main capabilities of the extension.
+<!--[Here is a video tutorial](https://www.youtube.com/watch?v=BEG-XhjjiaY) showing the installation process and demonstrating the main capabilities of the extension.-->
 
 This extension is compatible with the latest latest 3D Slicer Preview Release (version 5.7.0 - rev32797, or later), downloadable [from the official website]( https://download.slicer.org/ ). 
 
-The plugin can be installed in Slicer using
+The extension is not yet available in the extension manager as it has only been tested on CBCT volumes coming from the University of Alberta. Thus, it is necessary to install the extension manually by downloading it from GitHub and using the extension wizard as shown in this [video tutorial]([https://www.youtube.com/watch?v=BEG-XhjjiaY](https://www.youtube.com/watch?v=QsxzjQb05D4&t=89s))
+
+<!--The plugin can be installed in Slicer using
 the [extension manager]( https://slicer.readthedocs.io/en/latest/user_guide/extensions_manager.html#install-extensions).
 It can be found using the search bar by typing "UpperAirwaySegmentator".
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/extension_manager.png" width="200" />
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/extension_manager.png" width="200" />-->
 
 After the install process and restart of Slicer, the extension can be found in the module file explorer under `Segmentation>UpperAirwaySegmentator`.
 It can also be found by using the `find` module button and searching for the keyword `UpperAirwaySegmentator`.
@@ -32,11 +34,11 @@ It can also be found by using the `find` module button and searching for the key
 To use the extension, load a dental CT or CBCT by either drag and dropping the data in 3D Slicer or by using the
 `DATA` or `DCM` load buttons.
 
-To test the extension, you can use 3D Slicer's `CBCT Dental Surgery` volumes. These volumes can be found in the
-`Sample Data` module.
+<!--To test the extension, you can use 3D Slicer's `CBCT Dental Surgery` volumes. These volumes can be found in the
+`Sample Data` module. -->
 
 After loading the data, the data will be displayed in the 2D views.
-Switch module to the `DentalSegmentator` module and select the volume in the first drop down menu.
+Switch module to the `UpperAirwaySegmentator` module and select the volume in the first drop down menu.
 
 Click on the `Apply` button to start the segmentation.
 
@@ -123,7 +125,7 @@ the [CONTRIBUTING.md file](CONTRIBUTING.md).
 
 ## Acknowledgments 
 
-Authors: A. Matos Camarillo (University of Alberta), S. Capenakas-Gianoni (University of Alberta), M. Lagravere-Vich (University of Alberta)
+Authors: A. Matos Camarillo (University of Alberta), S. Capenakas-Gianoni (University of Alberta), K. Punithakumar (University of Alberta), M. Lagravere-Vich (University of Alberta)
 
 <!-- Supported by the [tk Add source of funding here] -->
 
