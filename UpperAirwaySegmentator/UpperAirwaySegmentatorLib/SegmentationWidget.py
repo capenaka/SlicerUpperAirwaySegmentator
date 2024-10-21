@@ -30,7 +30,7 @@ class SegmentationWidget(qt.QWidget):
         super().__init__(parent)
         self.logic = logic or self._createSlicerSegmentationLogic()
         self._prevSegmentationNode = None
-        voxel_size = 0.3  # mm³  for CBCTs
+        voxel_size = 0.3*0.3*0.3  # mm³  for CBCTs
         max_voxels_to_remove = 200
         self._minimumIslandSize_mm3 = voxel_size * max_voxels_to_remove
 
@@ -248,7 +248,7 @@ class SegmentationWidget(qt.QWidget):
                 return
 
         slicer.app.processEvents()
-        self.logic.setParameter(Parameter(folds="0", modelPath=self.nnUnetFolder()))
+        self.logic.setParameter(Parameter(folds="0,1,2,3,4", modelPath=self.nnUnetFolder()))
         self.logic.startSegmentation(self.getCurrentVolumeNode())
 
     def onInputChanged(self, *_):
