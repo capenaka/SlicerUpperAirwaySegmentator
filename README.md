@@ -1,6 +1,6 @@
 # Slicer UpperAirwaySegmentator 
 
-3D Slicer extension for fully-automatic segmentation of CBCT upper airway volumes.
+3D Slicer extension for fully-automatic segmentation of CBCT upper airway volumes using "DentalSegmentator"
 
 <img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/11.png" width="700"/>
 
@@ -9,7 +9,7 @@ UpperAirwaySegmentator is based on nnUNet framework. The Upper Airway (UA) is co
 
 If you use UpperAirwaySegmentator for your work, please also cite <!--our paper and -->nnU-Net:
 
-<!--> Matos Camarillo A, Capenakas-Gianoni S, Punithakumar K, Lagravere-Vich M. AirwaySegmentator: A deep learning-based method for Nasopharyngeal airway segmentation. Published online Month day, 2024:2024.xx.xx.xxxxxxxx. doi:10.1101/2024.xx.xx.xxxxxxxx-->
+<!-- Matos Camarillo A, Capenakas-Gianoni S, Punithakumar K, Lagravere-Vich M. AirwaySegmentator: A deep learning-based method for Nasopharyngeal airway segmentation. Published online Month day, 2024:2024.xx.xx.xxxxxxxx. doi:10.1101/2024.xx.xx.xxxxxxxx-->
 
 > Isensee F, Jaeger PF, Kohl SAA, Petersen J, Maier-Hein KH. nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nat Methods. 2021;18(2):203-211. doi:10.1038/s41592-020-01008-z
 <img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/angles.png" width="500"/>
@@ -20,13 +20,13 @@ If you use UpperAirwaySegmentator for your work, please also cite <!--our paper 
 
 This extension is compatible with the latest latest 3D Slicer Preview Release (version 5.7.0 - rev32797, or later), downloadable [from the official website]( https://download.slicer.org/ ). 
 
-The extension is not yet available in the extension manager as it has only been tested on CBCT volumes coming from the University of Alberta. Thus, it is necessary to install the extension manually by downloading it from GitHub and using the extension wizard as shown in this [video tutorial]([https://www.youtube.com/watch?v=BEG-XhjjiaY](https://www.youtube.com/watch?v=QsxzjQb05D4&t=89s))
+The extension is not yet available in the extension manager as of October 21, 2024. Thus, it is necessary to install the extension manually by downloading it to your computer and using the extension wizard, similarly as how it is shown in this [video tutorial]([https://youtu.be/QsxzjQb05D4?si=haksYNjVlO9nJO8l&t=78]))
 
 <!--The plugin can be installed in Slicer using
 the [extension manager]( https://slicer.readthedocs.io/en/latest/user_guide/extensions_manager.html#install-extensions).
 It can be found using the search bar by typing "UpperAirwaySegmentator".
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/extension_manager.png" width="200" />-->
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/5.png" width="200"/>-->
 
 After the install process and restart of Slicer, the extension can be found in the module file explorer under `Segmentation>UpperAirwaySegmentator`.
 It can also be found by using the `find` module button and searching for the keyword `UpperAirwaySegmentator`.
@@ -102,7 +102,7 @@ To do so, go to https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator 
 
 Download the latest `.zip` file from the release.
 
-Navigate to your `UpperAirwaySegmentator` folder <!--(this folder can be also found in the module finder window). -->
+Navigate to your `UpperAirwaySegmentator` folder (this folder can be also found in the module finder window).
 
 <!-- <img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/8.png" width="500"/> -->
 
@@ -114,9 +114,10 @@ Create a `download_info.json` file containing the path to the downloaded zip fil
   "download_url": "https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/releases/download/v1.0.0-alpha/Dataset013_Airways_40CBCT_v100.zip"
 }
 
-<!-- ## Command-line interface  
+### Failed to load segmentation
 
-If you want tu use DentalSegmentator via nnU-Net command-line interface use, [the pretrained model is available on Zenodo platform](https://zenodo.org/doi/10.5281/zenodo.10829674). -->
+Error reads "Failed to load segmentation. Something went wrong during nnUNet processing. Please check the logs for potential errors and contact the library maintainers." Cheack that the Torch version is at least 2.0.0.
+Otherwise, try uninstalling the PyTorch extension, restart 3D Slicer, and then reinstall the PyTorch extension again.
 
 ## Contributing
 
