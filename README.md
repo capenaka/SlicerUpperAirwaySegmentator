@@ -116,7 +116,7 @@ Create a `download_info.json` file containing the path to the downloaded zip fil
 
 ### Failed to load segmentation
 
-Error reads "Failed to load segmentation. Something went wrong during nnUNet processing. Please check the logs for potential errors and contact the library maintainers." Cheack that the Torch version is at least 2.0.0.
+Error reads "Failed to load segmentation. Something went wrong during nnUNet processing. Please check the logs for potential errors and contact the library maintainers." Check that the Torch version is at least 2.0.0.
 Otherwise, try uninstalling the PyTorch extension, restart 3D Slicer, and then reinstall the PyTorch extension again.
 
 ## Contributing
