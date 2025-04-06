@@ -25,7 +25,7 @@ This extension is compatible with the 3D Slicer Preview Release (version 5.7.0, 
 The plugin can be installed in Slicer using the [extension manager]( https://slicer.readthedocs.io/en/latest/user_guide/extensions_manager.html#install-extensions).
 It can be found using the search bar by typing "UpperAirwaySegmentator".
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/5.png" width="300"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/5.png" width="500"/>
 
 After the install process and restart of Slicer, the extension can be found in the module file explorer under `Segmentation>UpperAirwaySegmentator`.
 It can also be found by using the `find` module button and searching for the keyword `UpperAirwaySegmentator`.
