@@ -1,11 +1,11 @@
 # Slicer UpperAirwaySegmentator 
 
-3D Slicer extension for fully-automatic segmentation of CBCT upper airway volumes using "DentalSegmentator"
+3D Slicer extension for fully-automatic segmentation of CBCT upper airway volumes using "UpperAirwaySegmentator"
 
 <img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/11.png" width="700"/>
 
 ## UpperAirwaySegmentator Model
-UpperAirwaySegmentator is based on nnUNet framework. The Upper Airway (UA) is comprised of the pharyngeal and sinonasal airway regions. In this work, 75 CBCTs coming from the University of Alberta were manually segmented. 40 of these CBCT sets were randomly selected for training, while the remaining 35 were used for testing its performance. <!-- Will change this number later when I add more CBCTs to the training in v2 tk-->
+UpperAirwaySegmentator is built on the nnUNet framework and segments the pharyngeal and sinonasal airway regions. The dataset was split 70:30 into training and testing sets and included 75 CBCT scans from the University of Alberta, 65 from a private Chilean center, and 80 CT scans (40 pre- and 40 post-operative) from surgical departments in France.
 
 If you use UpperAirwaySegmentator for your work, please also cite <!--our paper and -->nnU-Net:
 
@@ -18,15 +18,14 @@ If you use UpperAirwaySegmentator for your work, please also cite <!--our paper 
 
 <!--[Here is a video tutorial](https://www.youtube.com/watch?v=BEG-XhjjiaY) showing the installation process and demonstrating the main capabilities of the extension.-->
 
-This extension is compatible with the latest latest 3D Slicer Preview Release (version 5.7.0 - rev32797, or later), downloadable [from the official website]( https://download.slicer.org/ ). 
+This extension is compatible with the 3D Slicer Preview Release (version 5.7.0, or later), downloadable [from the official website]( https://download.slicer.org/ ). 
 
-The extension is not yet available in the extension manager as of October 21, 2024. Thus, it is necessary to install the extension manually by downloading it to your computer and using the extension wizard, similarly as how it is shown in this [video tutorial]([https://youtu.be/QsxzjQb05D4?si=haksYNjVlO9nJO8l&t=78]))
+<!--The extension is not yet available in the extension manager as of October 21, 2024. Thus, it is necessary to install the extension manually by downloading it to your computer and using the extension wizard, similarly as how it is shown in this [video tutorial]([https://youtu.be/QsxzjQb05D4?si=haksYNjVlO9nJO8l&t=78]))-->
 
-<!--The plugin can be installed in Slicer using
-the [extension manager]( https://slicer.readthedocs.io/en/latest/user_guide/extensions_manager.html#install-extensions).
+The plugin can be installed in Slicer using the [extension manager]( https://slicer.readthedocs.io/en/latest/user_guide/extensions_manager.html#install-extensions).
 It can be found using the search bar by typing "UpperAirwaySegmentator".
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/5.png" width="200"/>-->
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/5.png" width="200"/>
 
 After the install process and restart of Slicer, the extension can be found in the module file explorer under `Segmentation>UpperAirwaySegmentator`.
 It can also be found by using the `find` module button and searching for the keyword `UpperAirwaySegmentator`.
