@@ -25,7 +25,7 @@ This extension is compatible with the 3D Slicer Preview Release (version 5.7.0, 
 The plugin can be installed in Slicer using the [extension manager]( https://slicer.readthedocs.io/en/latest/user_guide/extensions_manager.html#install-extensions).
 It can be found using the search bar by typing "UpperAirwaySegmentator".
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/5.png" width="200"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/5.png" width="300"/>
 
 After the install process and restart of Slicer, the extension can be found in the module file explorer under `Segmentation>UpperAirwaySegmentator`.
 It can also be found by using the `find` module button and searching for the keyword `UpperAirwaySegmentator`.
@@ -41,7 +41,7 @@ Switch module to the `UpperAirwaySegmentator` module and select the volume in th
 
 Click on the `Apply` button to start the segmentation.
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/4.png" width="300" />
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/4.png" width="400" />
 
 During the first launch, the module's dependencies will be installed. These dependencies include : 
 * The AI model weights
@@ -58,7 +58,7 @@ starting the segmentation process.
 During execution, the processing can be canceled using the `Stop` button.
 The progress will be reported in the console logs.
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/5.png" width="300"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/5.png" width="400"/>
 
 After the segmentation process has run, the segmentation will be loaded into the application.
 The segmentation results can be modified using the `Segment Editor` tools.
@@ -69,7 +69,7 @@ The segmentation can be exported as STL, NIfTI and/or OBJ using the `Export segm
 
 The `Surface smoothing` slider allows to change the 3D view surface smoothing algorithm.
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/6.png" width="300"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/6.png" width="400"/>
 
 ## Troubleshooting
 
@@ -92,7 +92,7 @@ a new version of PyTorch by setting the `Computation backend` compatible with yo
 
 The PyTorch version should be greater than `2.0.0` for nnUNet compatibility.
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/7.png" width="300"/>
+<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/7.png" width="400"/>
 
 ### Failed to download / find weights
 
