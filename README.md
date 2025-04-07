@@ -129,8 +129,7 @@ Authors: A. Matos Camarillo (University of Alberta), S. Capenakas-Gianoni (Unive
 
 <!-- Supported by the [tk Add source of funding here] -->
 
-This project is based on code from [Slicer DentalSegmentator project](https://github.com/gaudot/SlicerDentalSegmentator/tree/main), licensed under the Apache 2.0 License. The original code structure and core functionalities have been adapted for the purpose of this project.
-
+This project references the structural framework of the [Slicer DentalSegmentator project](https://github.com/gaudot/SlicerDentalSegmentator/tree/main) extension, licensed under the Apache 2.0 License. Our implementation features independently trained models and custom modifications while maintaining attribution to the original structural framework.
 <!-- ### Changes Made
 
 - Incorporated our nnUNet-v2 model weights trained on the segmentation of the pharyngeal and sinonasal airway regions
