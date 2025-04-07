@@ -24,13 +24,9 @@ def _dataFolderPath():
 
 def load_test_CT_volume():
     import SampleData
-    SampleData.SampleDataLogic().downloadUpperAirway()
-    return list(slicer.mrmlScene.GetNodesByName("UpperAirway"))[0]
+    SampleData.SampleDataLogic().downloadDentalSurgery()
+    return list(slicer.mrmlScene.GetNodesByName("PostDentalSurgery"))[0]
 
 
-def get_test_multi_label_path():
-    return _dataFolderPath().joinpath("UpperAirway_Segmentation.nii.gz").as_posix()
-
-
-def get_test_multi_label_path_with_segments_1_3_5():
+def get_test_label_path():
     return _dataFolderPath().joinpath("UpperAirway_Segmentation.nii.gz").as_posix()
