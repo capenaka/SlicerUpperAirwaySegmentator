@@ -5,9 +5,9 @@ from unittest.mock import MagicMock
 import SampleData
 import slicer
 
-from DentalSegmentatorLib import SegmentationWidget, Signal, ExportFormat
+from UpperAirwaySegmentatorLib import SegmentationWidget, Signal, ExportFormat
 from .Utils import (
-    DentalSegmentatorTestCase, get_test_multi_label_path, get_test_multi_label_path_with_segments_1_3_5,
+    UpperAirwaySegmentatorTestCase, get_test_multi_label_path, get_test_multi_label_path_with_segments_1_3_5,
     load_test_CT_volume
 )
 
@@ -33,7 +33,7 @@ class MockLogic:
         return slicer.util.loadSegmentation(get_test_multi_label_path_with_segments_1_3_5())
 
 
-class SegmentationWidgetTestCase(DentalSegmentatorTestCase):
+class SegmentationWidgetTestCase(UpperAirwaySegmentatorTestCase):
     def setUp(self):
         super().setUp()
         self.logic = MockLogic()
