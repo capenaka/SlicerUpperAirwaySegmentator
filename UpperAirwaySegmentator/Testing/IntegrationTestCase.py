@@ -1,13 +1,13 @@
 import slicer
 
-from DentalSegmentatorLib import PythonDependencyChecker, SegmentationWidget
-from .Utils import DentalSegmentatorTestCase, load_test_CT_volume
+from UpperAirwaySegmentatorLib import PythonDependencyChecker, SegmentationWidget
+from .Utils import UpperAirwaySegmentatorTestCase, load_test_CT_volume
 import qt
 import pytest
 
 
 @pytest.mark.slow
-class IntegrationTestCase(DentalSegmentatorTestCase):
+class IntegrationTestCase(UpperAirwaySegmentatorTestCase):
     def setUp(self):
         super().setUp()
         self.tmpDir = qt.QTemporaryDir()
@@ -28,7 +28,7 @@ class IntegrationTestCase(DentalSegmentatorTestCase):
         deps.downloadWeights(lambda *_: None)
         self.assertFalse(deps.areWeightsOutdated())
 
-    def test_dental_segmentator_can_run_segmentation(self):
+    def test_upperairway_segmentator_can_run_segmentation(self):
         self.widget = SegmentationWidget()
         self.widget.inputSelector.setCurrentNode(load_test_CT_volume())
         self.widget.applyButton.clicked()
