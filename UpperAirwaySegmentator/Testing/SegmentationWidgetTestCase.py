@@ -7,7 +7,7 @@ import slicer
 
 from UpperAirwaySegmentatorLib import SegmentationWidget, Signal, ExportFormat
 from .Utils import (
-    UpperAirwaySegmentatorTestCase, get_test_multi_label_path, get_test_multi_label_path_with_segments_1_3_5,
+    UpperAirwaySegmentatorTestCase, get_test_label_path,
     load_test_CT_volume
 )
 
@@ -26,11 +26,7 @@ class MockLogic:
 
     @staticmethod
     def load_segmentation():
-        return slicer.util.loadSegmentation(get_test_multi_label_path())
-
-    @staticmethod
-    def load_segmentation_partial():
-        return slicer.util.loadSegmentation(get_test_multi_label_path_with_segments_1_3_5())
+        return slicer.util.loadSegmentation(get_test_label_path())
 
 
 class SegmentationWidgetTestCase(UpperAirwaySegmentatorTestCase):
