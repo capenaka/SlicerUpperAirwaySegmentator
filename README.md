@@ -88,7 +88,7 @@ into this issue, you can create a SWAP file on SSD with 16 GB which should solve
 On Windows, the torch CUDA dependency may not properly be detected and installed.
 
 To solve this problem, you can use the `PyTorch Utils` extension, uninstall the version of PyTorch and install 
-a new version of PyTorch by setting the `Computation backend` compatible with your hardware.
+a new version of PyTorch by setting the `Computation backend` compatible with your hardware. Make sure to restart Slicer after performing the re-installation.
 
 The PyTorch version should be greater than `2.0.0` for nnUNet compatibility.
 
