@@ -248,7 +248,7 @@ class SegmentationWidget(qt.QWidget):
                 return
 
         slicer.app.processEvents()
-        self.logic.setParameter(Parameter(folds="0,1,2,3,4", modelPath=self.nnUnetFolder()))
+        self.logic.setParameter(Parameter(folds="0", modelPath=self.nnUnetFolder()))
         self.logic.startSegmentation(self.getCurrentVolumeNode())
 
     def onInputChanged(self, *_):
