@@ -138,5 +138,9 @@ This project references the structural framework of the [Slicer DentalSegmentato
 
 ## Contact
 
-For any questions or suggestions, please contact Alejandro Matos Camarillo at amatos@ualberta.ca.
+For clinical support:
+Dr. Silvia Gianoni-Capenakas - capenaka@ualberta.ca
+Dr. Manuel Lagravere-Vich - manuel@ualberta.ca
 
+For technical inquiries:
+Alejandro Matos Camarillo - amatos@ualberta.ca
