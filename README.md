@@ -139,7 +139,7 @@ This project references the structural framework of the [Slicer DentalSegmentato
 ## Contact
 
 For clinical support:
-Dr. Silvia Gianoni-Capenakas - capenaka@ualberta.ca
+Dr. Silvia Gianoni-Capenakas - capenaka@ualberta.ca,
 Dr. Manuel Lagravere-Vich - manuel@ualberta.ca
 
 For technical inquiries:
