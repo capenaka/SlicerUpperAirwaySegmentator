@@ -94,24 +94,33 @@ The PyTorch version should be greater than `2.0.0` for nnUNet compatibility.
 
 <img src="https://github.com/capenaka/SlicerUpperAirwaySegmentator/raw/main/Screenshots/7.png" width="500"/>
 
-### Failed to download / find weights
+### Failed to Download / Find Weights
 
-If the weights are not correctly installed, you can install them manually.
-To do so, go to https://github.com/capenaka/SlicerUpperAirwaySegmentator  and select the latest release.
+If the weights are not correctly installed, you can install them manually from here:  
+➡️ [Download weights from the latest release](https://github.com/capenaka/SlicerUpperAirwaySegmentator/releases/latest)
 
-Download the latest `.zip` file from the release.
+#### Manual Installation Steps
 
-Navigate to your `UpperAirwaySegmentator` folder (this folder can be also found in the module finder window).
+1. Download the `.zip` weight file from the link above.
+2. Locate your `UpperAirwaySegmentator` folder (you can find its location in the Slicer module finder window).
+3. Unzip the weight file into the following folder:  
+   `UpperAirwaySegmentator\Resources\ML`
+4. Create a `download_info.json` file in the same folder with the following content (update the URL if a newer version is available):
 
-<!-- <img src="https://github.com/capenaka/SlicerUpperAirwaySegmentator/raw/main/Screenshots/8.png" width="500"/> -->
-
-Unzip the weight file in the `UpperAirwaySegmentator\Resources\ML` folder.
-
-Create a `download_info.json` file containing the path to the downloaded zip file for future reference : 
-
+```json
 {
-  "download_url": "https://github.com/capenaka/SlicerUpperAirwaySegmentator/releases/download/v1.0.1/Dataset014_Airways_155CBCT_fold_all.zip "
+  "download_url": "https://github.com/capenaka/SlicerUpperAirwaySegmentator/releases/download/v1.0.1/Dataset014_Airways_155CBCT_fold_all.zip"
 }
+```
+
+#### ⚠️ Note for Windows Users
+
+If the full path to the weights exceeds Windows’s 260-character limit, the program may fail to find the weights.  
+To fix this, move the module to a shorter path such as: 
+
+C:\SlicerModules\UpperAirwaySegmentator
+
+and try again.
 
 ### Failed to load segmentation
 
