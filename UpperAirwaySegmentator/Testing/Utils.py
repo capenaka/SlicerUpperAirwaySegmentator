@@ -19,7 +19,7 @@ class UpperAirwaySegmentatorTestCase(unittest.TestCase):
         
         # Create the download_info.json file
         download_info = {
-            "download_url": "https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/releases/download/v1.0.1/Dataset014_Airways_155CBCT_fold_all.zip"
+            "download_url": "https://github.com/capenaka/SlicerUpperAirwaySegmentator/releases/download/v1.0.1/Dataset014_Airways_155CBCT_fold_all.zip"
         }
         
         with open(ml_folder / "download_info.json", "w") as f:
