@@ -22,8 +22,7 @@ set(MODULE_PYTHON_RESOURCES
   Resources/Icons/info.png
   Resources/Icons/loading.gif
   Resources/Icons/start_icon.png
-  Testing/Data/PostDentalSurgery_Segmentation.nii.gz
-  Testing/Data/PostDentalSurgery_Segmentation_1_3_5.nii.gz
+  Testing/Data/UpperAirway_Segmentation.nii.gz
   )
 
 #-----------------------------------------------------------------------------
