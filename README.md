@@ -117,9 +117,9 @@ If the weights are not correctly installed, you can install them manually from h
 
 If the full path to the weights exceeds Windows’s 260-character limit, the program may fail to find the weights.  
 To fix this, move the module to a shorter path such as: 
-
+```
 C:\SlicerModules\UpperAirwaySegmentator
-
+```
 and try again.
 
 ### Failed to load segmentation
