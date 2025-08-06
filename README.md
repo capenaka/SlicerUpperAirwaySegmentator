@@ -2,7 +2,7 @@
 
 3D Slicer extension for fully-automatic segmentation of CBCT upper airway volumes using "UpperAirwaySegmentator"
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/11.png" width="700"/>
+<img src="https://github.com/capenaka/SlicerUpperAirwaySegmentator/raw/main/Screenshots/11.png" width="700"/>
 
 ## UpperAirwaySegmentator Model
 UpperAirwaySegmentator is built on the nnUNet framework and segments the pharyngeal and sinonasal airway regions. The dataset was split 70:30 into training and testing sets and included 75 CBCT scans from the University of Alberta, 65 from a private Chilean center, and 80 CT scans (40 pre- and 40 post-operative) from surgical departments in France.
@@ -12,7 +12,7 @@ If you use UpperAirwaySegmentator for your work, please also cite <!--our paper 
 <!-- Matos Camarillo A, Capenakas-Gianoni S, Punithakumar K, Lagravere-Vich M. AirwaySegmentator: A deep learning-based method for Nasopharyngeal airway segmentation. Published online Month day, 2024:2024.xx.xx.xxxxxxxx. doi:10.1101/2024.xx.xx.xxxxxxxx-->
 
 > Isensee F, Jaeger PF, Kohl SAA, Petersen J, Maier-Hein KH. nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nat Methods. 2021;18(2):203-211. doi:10.1038/s41592-020-01008-z
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/angles.png" width="500"/>
+<img src="https://github.com/capenaka/SlicerUpperAirwaySegmentator/raw/main/Screenshots/angles.png" width="500"/>
 
 ## Using the extension
 
@@ -25,7 +25,7 @@ This extension is compatible with the 3D Slicer Preview Release (version 5.7.0, 
 The plugin can be installed in Slicer using the [extension manager]( https://slicer.readthedocs.io/en/latest/user_guide/extensions_manager.html#install-extensions).
 It can be found using the search bar by typing "UpperAirwaySegmentator".
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/5.png" width="500"/>
+<img src="https://github.com/capenaka/SlicerUpperAirwaySegmentator/raw/main/Screenshots/5.png" width="500"/>
 
 After the install process and restart of Slicer, the extension can be found in the module file explorer under `Segmentation>UpperAirwaySegmentator`.
 It can also be found by using the `find` module button and searching for the keyword `UpperAirwaySegmentator`.
@@ -41,7 +41,7 @@ Switch module to the `UpperAirwaySegmentator` module and select the volume in th
 
 Click on the `Apply` button to start the segmentation.
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/4.png" width="500" />
+<img src="https://github.com/capenaka/SlicerUpperAirwaySegmentator/raw/main/Screenshots/4.png" width="500" />
 
 During the first launch, the module's dependencies will be installed. These dependencies include : 
 * The AI model weights
@@ -53,23 +53,23 @@ After the install, the volume will be transferred and sent to the nnUNet V2 libr
 If your device doesn't include CUDA, the processing may be very long and a dialog will ask for confirmation before
 starting the segmentation process.
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/upperairwaysegmentator_run.gif"/>
+<img src="https://github.com/capenaka/SlicerUpperAirwaySegmentator/raw/main/Screenshots/upperairwaysegmentator_run.gif"/>
 
 During execution, the processing can be canceled using the `Stop` button.
 The progress will be reported in the console logs.
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/5.png" width="500"/>
+<img src="https://github.com/capenaka/SlicerUpperAirwaySegmentator/raw/main/Screenshots/5.png" width="500"/>
 
 After the segmentation process has run, the segmentation will be loaded into the application.
 The segmentation results can be modified using the `Segment Editor` tools.
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/upperairwaysegmentator_3dmodel.gif"/>
+<img src="https://github.com/capenaka/SlicerUpperAirwaySegmentator/raw/main/Screenshots/upperairwaysegmentator_3dmodel.gif"/>
 
 The segmentation can be exported as STL, NIfTI and/or OBJ using the `Export segmentation` menu and selecting the export format(s).
 
 The `Surface smoothing` slider allows to change the 3D view surface smoothing algorithm.
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/6.png" width="500"/>
+<img src="https://github.com/capenaka/SlicerUpperAirwaySegmentator/raw/main/Screenshots/6.png" width="500"/>
 
 ## Troubleshooting
 
@@ -92,25 +92,25 @@ a new version of PyTorch by setting the `Computation backend` compatible with yo
 
 The PyTorch version should be greater than `2.0.0` for nnUNet compatibility.
 
-<img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/7.png" width="500"/>
+<img src="https://github.com/capenaka/SlicerUpperAirwaySegmentator/raw/main/Screenshots/7.png" width="500"/>
 
 ### Failed to download / find weights
 
 If the weights are not correctly installed, you can install them manually.
-To do so, go to https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator  and select the latest release.
+To do so, go to https://github.com/capenaka/SlicerUpperAirwaySegmentator  and select the latest release.
 
 Download the latest `.zip` file from the release.
 
 Navigate to your `UpperAirwaySegmentator` folder (this folder can be also found in the module finder window).
 
-<!-- <img src="https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/raw/main/Screenshots/8.png" width="500"/> -->
+<!-- <img src="https://github.com/capenaka/SlicerUpperAirwaySegmentator/raw/main/Screenshots/8.png" width="500"/> -->
 
 Unzip the weight file in the `UpperAirwaySegmentator\Resources\ML` folder.
 
 Create a `download_info.json` file containing the path to the downloaded zip file for future reference : 
 
 {
-  "download_url": "https://github.com/alejandro-matos/SlicerUpperAirwaySegmentator/releases/download/v1.0.0-alpha/Dataset014_Airways_155CBCT_fold_all.zip "
+  "download_url": "https://github.com/capenaka/SlicerUpperAirwaySegmentator/releases/download/v1.0.0-alpha/Dataset014_Airways_155CBCT_fold_all.zip "
 }
 
 ### Failed to load segmentation
