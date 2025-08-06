@@ -110,7 +110,7 @@ Unzip the weight file in the `UpperAirwaySegmentator\Resources\ML` folder.
 Create a `download_info.json` file containing the path to the downloaded zip file for future reference : 
 
 {
-  "download_url": "https://github.com/capenaka/SlicerUpperAirwaySegmentator/releases/download/v1.0.0-alpha/Dataset014_Airways_155CBCT_fold_all.zip "
+  "download_url": "https://github.com/capenaka/SlicerUpperAirwaySegmentator/releases/download/v1.0.1/Dataset014_Airways_155CBCT_fold_all.zip "
 }
 
 ### Failed to load segmentation
