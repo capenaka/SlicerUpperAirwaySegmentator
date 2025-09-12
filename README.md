@@ -18,7 +18,7 @@ If you use UpperAirwaySegmentator for your work, please also cite <!--our paper 
 
 <!--[Here is a video tutorial](https://www.youtube.com/watch?v=BEG-XhjjiaY) showing the installation process and demonstrating the main capabilities of the extension.-->
 
-This extension is compatible with the 3D Slicer Preview Release (version 5.7.0, or later), downloadable [from the official website]( https://download.slicer.org/ ). 
+This extension is compatible with the 3D Slicer Preview Release (version 5.9.0, or later), downloadable [from the official website]( https://download.slicer.org/ ). 
 
 <!--The extension is not yet available in the extension manager as of October 21, 2024. Thus, it is necessary to install the extension manually by downloading it to your computer and using the extension wizard, similarly as how it is shown in this [video tutorial]([https://youtu.be/QsxzjQb05D4?si=haksYNjVlO9nJO8l&t=78]))-->
 
