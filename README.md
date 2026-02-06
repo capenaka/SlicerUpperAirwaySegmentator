@@ -9,7 +9,7 @@ UpperAirwaySegmentator is built on the nnUNet framework and segments the pharyng
 
 If you use UpperAirwaySegmentator for your work, please also cite <!--our paper and -->nnU-Net:
 
-<!-- Matos Camarillo A, Capenakas-Gianoni S, Punithakumar K, Lagravere-Vich M. AirwaySegmentator: A deep learning-based method for Nasopharyngeal airway segmentation. Published online Month day, 2024:2024.xx.xx.xxxxxxxx. doi:10.1101/2024.xx.xx.xxxxxxxx-->
+> Silvia Gianoni-Capenakas, Alejandro Matos, Gauthier Dot, Thomas Schouman, Akhilanand Chaurasia, Benjamin Pliska, Manuel Lagravere, Kumaradevan Panithakumar, Segmentation of the Upper Airway using Deep learning - nnUNet, Journal of Dentistry (2026), doi: https://doi.org/10.1016/j.jdent.2026.106507
 
 > Isensee F, Jaeger PF, Kohl SAA, Petersen J, Maier-Hein KH. nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nat Methods. 2021;18(2):203-211. doi:10.1038/s41592-020-01008-z
 <img src="https://github.com/capenaka/SlicerUpperAirwaySegmentator/raw/main/Screenshots/angles.png" width="500"/>
@@ -19,8 +19,6 @@ If you use UpperAirwaySegmentator for your work, please also cite <!--our paper 
 <!--[Here is a video tutorial](https://www.youtube.com/watch?v=BEG-XhjjiaY) showing the installation process and demonstrating the main capabilities of the extension.-->
 
 This extension is compatible with the 3D Slicer Preview Release (version 5.9.0, or later), downloadable [from the official website]( https://download.slicer.org/ ). 
-
-<!--The extension is not yet available in the extension manager as of October 21, 2024. Thus, it is necessary to install the extension manually by downloading it to your computer and using the extension wizard, similarly as how it is shown in this [video tutorial]([https://youtu.be/QsxzjQb05D4?si=haksYNjVlO9nJO8l&t=78]))-->
 
 The plugin can be installed in Slicer using the [extension manager]( https://slicer.readthedocs.io/en/latest/user_guide/extensions_manager.html#install-extensions).
 It can be found using the search bar by typing "UpperAirwaySegmentator".
