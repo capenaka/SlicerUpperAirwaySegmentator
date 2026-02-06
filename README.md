@@ -7,7 +7,7 @@
 ## UpperAirwaySegmentator Model
 UpperAirwaySegmentator is built on the nnUNet framework and segments the pharyngeal and sinonasal airway regions. The dataset was split 70:30 into training and testing sets and included 75 CBCT scans from the University of Alberta, 65 from a private Chilean center, and 80 CT scans (40 pre- and 40 post-operative) from surgical departments in France.
 
-If you use UpperAirwaySegmentator for your work, please also cite <!--our paper and -->nnU-Net:
+If you use UpperAirwaySegmentator for your work, please also cite our paper and nnU-Net:
 
 > Silvia Gianoni-Capenakas, Alejandro Matos, Gauthier Dot, Thomas Schouman, Akhilanand Chaurasia, Benjamin Pliska, Manuel Lagravere, Kumaradevan Panithakumar, Segmentation of the Upper Airway using Deep learning - nnUNet, Journal of Dentistry (2026), doi: https://doi.org/10.1016/j.jdent.2026.106507
 
